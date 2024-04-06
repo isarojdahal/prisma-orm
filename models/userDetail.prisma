@@ -1,0 +1,10 @@
+
+
+
+
+model UserDetail {
+    id Int @id @default(autoincrement())
+    address String 
+    user User @relation(fields: [userId], references: [id])
+    userId Int @unique
+}
